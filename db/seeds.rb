@@ -17,23 +17,84 @@ tests = Test.create!([
 ])
 
 questions = Question.create!([
-  {body: 'Приведите примет полиморфизма в Ruby', test_id: tests[0].id},
-  {body: 'Укажите типизации Ruby', test_id: tests[0].id},
-  {body: 'Какой тег используется для того, чтобы гиперссылка открывалась в новом окне?', test_id: tests[1].id},
-  {body: 'Какие категории SQL можно выделить', test_id: tests[2].id},
-  {body: 'Приведите последовательность обработки http запроса приложением Rails', test_id: tests[4].id},
-  {body: 'Какое применение, кроме мобильной разработки имеет Java?', test_id: tests[3].id}
+  {body: 'RubyTestFirstQuestion', test_id: tests[0].id},
+  {body: 'RubyTestSecondQuestion', test_id: tests[0].id},
+  {body: 'RubyTestThirdQuestion', test_id: tests[0].id},
+  {body: 'HTMLTestFirstQuestion', test_id: tests[1].id},
+  {body: 'HTMLTestSecondQuestion', test_id: tests[1].id},
+  {body: 'HTMLTestThirdQuestion', test_id: tests[1].id},
+  {body: 'SQLTestFirstQuestion', test_id: tests[2].id},
+  {body: 'SQLTestSecondQuestion', test_id: tests[2].id},
+  {body: 'SQLTestThirdQuestion', test_id: tests[2].id},
+  {body: 'RailsTestFirstQuestion', test_id: tests[4].id},
+  {body: 'RailsTestSecondQuestion', test_id: tests[4].id},
+  {body: 'RailsTestThirdQuestion', test_id: tests[4].id},
+  {body: 'JavaTestFirstQuestion', test_id: tests[3].id},
+  {body: 'JavaTestSecondQuestion', test_id: tests[3].id},
+  {body: 'JavaTestThirdQuestion', test_id: tests[3].id}
 ])
 
 answers = Answer.create!([
-  {body: '2 + 4 = 6, a + b = ab, в данном примере один и тот же метод '+' в первом случае работает как арифметическая
-    операция сложения, а во втором как операция конкатенации строк, т.е. в зависимости от того, на объекте какого типа этот метод вызван и объект какого типа получает
-    в качестве аргумента, данный метод работает по-разному', question_id: questions[0].id},
-  {body: 'Ruby имеет динамическую, строгую, неявную типизацию', question_id: questions[1].id},
-  {body: 'Для того, чтобы ссылка открывалась в новом окне используется тег <a>', question_id: questions[2].id},
-  {body: 'В SQL можно выделить категории: DDL - Data Definition Language и DML Data Manipulation Language', question_id: questions[3].id},
-  {body: 'сервер - роутер - контроллер - модель - БД - модель - контроллер - представление - контроллер - сервер', question_id: questions[4].id},
-  {body: 'Java также применяется в web - разработке, big-data, серверных приложениях, программировании встроенных систем и др.', question_id: questions[5].id}
+
+{body: 'RubyTestFirstQuestionFirstAnswer', question_id: questions[0].id},
+{body: 'RubyTestFirstQuestionSecondAnswer', question_id: questions[0].id, correct: true},
+{body: 'RubyTestFirstQuestionThirdAnswer', question_id: questions[0].id},
+
+{body: 'RubyTestSecondQuestionFirstAnswer', question_id: questions[1].id},
+{body: 'RubyTestSecondQuestionSecondAnswer', question_id: questions[1].id},
+{body: 'RubyTestSecondQuestionThirdAnswer', question_id: questions[1].id, correct: true},
+
+{body: 'RubyTestThirdQuestionFirstAnswer', question_id: questions[2].id, correct: true},
+{body: 'RubyTestThirdQuestionSecondAnswer', question_id: questions[2].id},
+{body: 'RubyTestThirdQuestionThirdAnswer', question_id: questions[2].id},
+
+{body: 'HTMLTestFirstQuestionFirstAnswer', question_id: questions[3].id, correct: true},
+{body: 'HTMLTestFirstQuestionSecondAnswer', question_id: questions[3].id},
+{body: 'HTMLTestFirstQuestionThirdAnswer', question_id: questions[3].id},
+
+{body: 'HTMLTestSecondtQuestionFirstAnswer', question_id: questions[4].id},
+{body: 'HTMLTestSecondQuestionSecondAnswer', question_id: questions[4].id, correct: true},
+{body: 'HTMLTestSecondQuestionThirdAnswer', question_id: questions[4].id},
+
+{body: 'HTMLTestThirdQuestionFirstAnswer', question_id: questions[5].id, correct: true},
+{body: 'HTMLTestThirdQuestionSecondAnswer', question_id: questions[5].id},
+{body: 'HTMLTestThirdQuestionThirdAnswer', question_id: questions[5].id},
+
+{body: 'SQLTestFirstQuestionFirstAnswer', question_id: questions[6].id},
+{body: 'SQLTestFirstQuestionSecondAnswer', question_id: questions[6].id},
+{body: 'SQLTestFirstQuestionThirdAnswer', question_id: questions[6].id, correct: true},
+
+{body: 'SQLTestSecondQuestionFirstAnswer', question_id: questions[7].id},
+{body: 'SQLTestSecondQuestionSecondAnswer', question_id: questions[7].id, correct: true},
+{body: 'SQLTestSecondQuestionThirdAnswer', question_id: questions[7].id},
+
+{body: 'SQLTestThirdQuestionFirstAnswer', question_id: questions[8].id, correct: true},
+{body: 'SQLTestThirddQuestionSecondAnswer', question_id: questions[8].id},
+{body: 'SQLTestThirdQuestionThirdAnswer', question_id: questions[8].id},
+
+{body: 'RailsTestFirstQuestionFirstAnswer', question_id: questions[9].id},
+{body: 'RailsTestFirstQuestionSecondAnswer', question_id: questions[9].id},
+{body: 'RailsTestFirstQuestionThirdAnswer', question_id: questions[9].id, correct: true},
+
+{body: 'RailsTestSecondQuestionFirstAnswer', question_id: questions[10].id, correct: true},
+{body: 'RailsTestSecondQuestionSecondAnswer', question_id: questions[10].id},
+{body: 'RailsTestSecondQuestionThirdAnswer', question_id: questions[10].id},
+
+{body: 'RailsTestThirdQuestionFirstAnswer', question_id: questions[11].id},
+{body: 'RailsTestThirdQuestionSecondAnswer', question_id: questions[11].id, correct: true},
+{body: 'RailsTestThirdQuestionThirdAnswer', question_id: questions[11].id},
+
+{body: 'JavaTestFirstQuestionFirstAnswer', question_id: questions[12].id},
+{body: 'JavaTestFirstQuestionSecondAnswer', question_id: questions[12].id, correct: true},
+{body: 'JavaTestFirstQuestionThirdAnswer', question_id: questions[12].id},
+
+{body: 'JavaTestSecondQuestionFirstAnswer', question_id: questions[13].id, correct: true},
+{body: 'JavaTestSecondQuestionSecondAnswer', question_id: questions[13].id},
+{body: 'JavaTestSecondQuestionThirdAnswer', question_id: questions[13].id},
+
+{body: 'JavaTestThirdQuestionFirstAnswer', question_id: questions[14].id},
+{body: 'JavaTestThirdQuestionSecondAnswer', question_id: questions[14].id},
+{body: 'JavaTestThirdQuestionThirdAnswer', question_id: questions[14].id, correct: true}
 ])
 
 
