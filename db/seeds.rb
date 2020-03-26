@@ -9,92 +9,92 @@ categories = Category.create!([
 ])
 
 tests = Test.create!([
-  {title: :Ruby, level: 0, category_id: categories[0].id},
-  {title: :HTML, level: 0, category_id: categories[1].id},
-  {title: :SQL, level: 0, category_id: categories[0].id},
-  {title: :Java, level: 0, category_id: categories[2].id},
-  {title: :Rails, level: 1, category_id: categories[0].id}
+  {title: :Ruby, level: 0, category: categories[0], author: users[0]},
+  {title: :HTML, level: 0, category: categories[1], author: users[0]},
+  {title: :SQL, level: 0, category: categories[0], author: users[0]},
+  {title: :Java, level: 0, category: categories[2], author: users[0]},
+  {title: :Rails, level: 1, category: categories[0], author: users[0]}
 ])
 
 questions = Question.create!([
-  {body: 'RubyTestFirstQuestion', test_id: tests[0].id},
-  {body: 'RubyTestSecondQuestion', test_id: tests[0].id},
-  {body: 'RubyTestThirdQuestion', test_id: tests[0].id},
-  {body: 'HTMLTestFirstQuestion', test_id: tests[1].id},
-  {body: 'HTMLTestSecondQuestion', test_id: tests[1].id},
-  {body: 'HTMLTestThirdQuestion', test_id: tests[1].id},
-  {body: 'SQLTestFirstQuestion', test_id: tests[2].id},
-  {body: 'SQLTestSecondQuestion', test_id: tests[2].id},
-  {body: 'SQLTestThirdQuestion', test_id: tests[2].id},
-  {body: 'RailsTestFirstQuestion', test_id: tests[4].id},
-  {body: 'RailsTestSecondQuestion', test_id: tests[4].id},
-  {body: 'RailsTestThirdQuestion', test_id: tests[4].id},
-  {body: 'JavaTestFirstQuestion', test_id: tests[3].id},
-  {body: 'JavaTestSecondQuestion', test_id: tests[3].id},
-  {body: 'JavaTestThirdQuestion', test_id: tests[3].id}
+  {body: 'RubyTestFirstQuestion', test: tests[0]},
+  {body: 'RubyTestSecondQuestion', test: tests[0]},
+  {body: 'RubyTestThirdQuestion', test: tests[0]},
+  {body: 'HTMLTestFirstQuestion', test: tests[1]},
+  {body: 'HTMLTestSecondQuestion', test: tests[1]},
+  {body: 'HTMLTestThirdQuestion', test: tests[1]},
+  {body: 'SQLTestFirstQuestion', test: tests[2]},
+  {body: 'SQLTestSecondQuestion', test: tests[2]},
+  {body: 'SQLTestThirdQuestion', test: tests[2]},
+  {body: 'RailsTestFirstQuestion', test: tests[4]},
+  {body: 'RailsTestSecondQuestion', test: tests[4]},
+  {body: 'RailsTestThirdQuestion', test: tests[4]},
+  {body: 'JavaTestFirstQuestion', test: tests[3]},
+  {body: 'JavaTestSecondQuestion', test: tests[3]},
+  {body: 'JavaTestThirdQuestion', test: tests[3]}
 ])
 
 answers = Answer.create!([
 
-{body: 'RubyTestFirstQuestionFirstAnswer', question_id: questions[0].id},
-{body: 'RubyTestFirstQuestionSecondAnswer', question_id: questions[0].id, correct: true},
-{body: 'RubyTestFirstQuestionThirdAnswer', question_id: questions[0].id},
+{body: 'RubyTestFirstQuestionFirstAnswer', question: questions[0]},
+{body: 'RubyTestFirstQuestionSecondAnswer', question: questions[0], correct: true},
+{body: 'RubyTestFirstQuestionThirdAnswer', question: questions[0]},
 
-{body: 'RubyTestSecondQuestionFirstAnswer', question_id: questions[1].id},
-{body: 'RubyTestSecondQuestionSecondAnswer', question_id: questions[1].id},
-{body: 'RubyTestSecondQuestionThirdAnswer', question_id: questions[1].id, correct: true},
+{body: 'RubyTestSecondQuestionFirstAnswer', question: questions[1]},
+{body: 'RubyTestSecondQuestionSecondAnswer', question: questions[1]},
+{body: 'RubyTestSecondQuestionThirdAnswer', question: questions[1], correct: true},
 
-{body: 'RubyTestThirdQuestionFirstAnswer', question_id: questions[2].id, correct: true},
-{body: 'RubyTestThirdQuestionSecondAnswer', question_id: questions[2].id},
-{body: 'RubyTestThirdQuestionThirdAnswer', question_id: questions[2].id},
+{body: 'RubyTestThirdQuestionFirstAnswer', question: questions[2], correct: true},
+{body: 'RubyTestThirdQuestionSecondAnswer', question: questions[2]},
+{body: 'RubyTestThirdQuestionThirdAnswer', question: questions[2]},
 
-{body: 'HTMLTestFirstQuestionFirstAnswer', question_id: questions[3].id, correct: true},
-{body: 'HTMLTestFirstQuestionSecondAnswer', question_id: questions[3].id},
-{body: 'HTMLTestFirstQuestionThirdAnswer', question_id: questions[3].id},
+{body: 'HTMLTestFirstQuestionFirstAnswer', question: questions[3], correct: true},
+{body: 'HTMLTestFirstQuestionSecondAnswer', question: questions[3]},
+{body: 'HTMLTestFirstQuestionThirdAnswer', question: questions[3]},
 
-{body: 'HTMLTestSecondtQuestionFirstAnswer', question_id: questions[4].id},
-{body: 'HTMLTestSecondQuestionSecondAnswer', question_id: questions[4].id, correct: true},
-{body: 'HTMLTestSecondQuestionThirdAnswer', question_id: questions[4].id},
+{body: 'HTMLTestSecondtQuestionFirstAnswer', question: questions[4]},
+{body: 'HTMLTestSecondQuestionSecondAnswer', question: questions[4], correct: true},
+{body: 'HTMLTestSecondQuestionThirdAnswer', question: questions[4]},
 
-{body: 'HTMLTestThirdQuestionFirstAnswer', question_id: questions[5].id, correct: true},
-{body: 'HTMLTestThirdQuestionSecondAnswer', question_id: questions[5].id},
-{body: 'HTMLTestThirdQuestionThirdAnswer', question_id: questions[5].id},
+{body: 'HTMLTestThirdQuestionFirstAnswer', question: questions[5], correct: true},
+{body: 'HTMLTestThirdQuestionSecondAnswer', question: questions[5]},
+{body: 'HTMLTestThirdQuestionThirdAnswer', question: questions[5]},
 
-{body: 'SQLTestFirstQuestionFirstAnswer', question_id: questions[6].id},
-{body: 'SQLTestFirstQuestionSecondAnswer', question_id: questions[6].id},
-{body: 'SQLTestFirstQuestionThirdAnswer', question_id: questions[6].id, correct: true},
+{body: 'SQLTestFirstQuestionFirstAnswer', question: questions[6]},
+{body: 'SQLTestFirstQuestionSecondAnswer', question: questions[6]},
+{body: 'SQLTestFirstQuestionThirdAnswer', question: questions[6], correct: true},
 
-{body: 'SQLTestSecondQuestionFirstAnswer', question_id: questions[7].id},
-{body: 'SQLTestSecondQuestionSecondAnswer', question_id: questions[7].id, correct: true},
-{body: 'SQLTestSecondQuestionThirdAnswer', question_id: questions[7].id},
+{body: 'SQLTestSecondQuestionFirstAnswer', question: questions[7]},
+{body: 'SQLTestSecondQuestionSecondAnswer', question: questions[7], correct: true},
+{body: 'SQLTestSecondQuestionThirdAnswer', question: questions[7]},
 
-{body: 'SQLTestThirdQuestionFirstAnswer', question_id: questions[8].id, correct: true},
-{body: 'SQLTestThirddQuestionSecondAnswer', question_id: questions[8].id},
-{body: 'SQLTestThirdQuestionThirdAnswer', question_id: questions[8].id},
+{body: 'SQLTestThirdQuestionFirstAnswer', question: questions[8], correct: true},
+{body: 'SQLTestThirddQuestionSecondAnswer', question: questions[8]},
+{body: 'SQLTestThirdQuestionThirdAnswer', question: questions[8]},
 
-{body: 'RailsTestFirstQuestionFirstAnswer', question_id: questions[9].id},
-{body: 'RailsTestFirstQuestionSecondAnswer', question_id: questions[9].id},
-{body: 'RailsTestFirstQuestionThirdAnswer', question_id: questions[9].id, correct: true},
+{body: 'RailsTestFirstQuestionFirstAnswer', question: questions[9]},
+{body: 'RailsTestFirstQuestionSecondAnswer', question: questions[9]},
+{body: 'RailsTestFirstQuestionThirdAnswer', question: questions[9], correct: true},
 
-{body: 'RailsTestSecondQuestionFirstAnswer', question_id: questions[10].id, correct: true},
-{body: 'RailsTestSecondQuestionSecondAnswer', question_id: questions[10].id},
-{body: 'RailsTestSecondQuestionThirdAnswer', question_id: questions[10].id},
+{body: 'RailsTestSecondQuestionFirstAnswer', question: questions[10], correct: true},
+{body: 'RailsTestSecondQuestionSecondAnswer', question: questions[10]},
+{body: 'RailsTestSecondQuestionThirdAnswer', question: questions[10]},
 
-{body: 'RailsTestThirdQuestionFirstAnswer', question_id: questions[11].id},
-{body: 'RailsTestThirdQuestionSecondAnswer', question_id: questions[11].id, correct: true},
-{body: 'RailsTestThirdQuestionThirdAnswer', question_id: questions[11].id},
+{body: 'RailsTestThirdQuestionFirstAnswer', question: questions[11]},
+{body: 'RailsTestThirdQuestionSecondAnswer', question: questions[11], correct: true},
+{body: 'RailsTestThirdQuestionThirdAnswer', question: questions[11]},
 
-{body: 'JavaTestFirstQuestionFirstAnswer', question_id: questions[12].id},
-{body: 'JavaTestFirstQuestionSecondAnswer', question_id: questions[12].id, correct: true},
-{body: 'JavaTestFirstQuestionThirdAnswer', question_id: questions[12].id},
+{body: 'JavaTestFirstQuestionFirstAnswer', question: questions[12]},
+{body: 'JavaTestFirstQuestionSecondAnswer', question: questions[12], correct: true},
+{body: 'JavaTestFirstQuestionThirdAnswer', question: questions[12]},
 
-{body: 'JavaTestSecondQuestionFirstAnswer', question_id: questions[13].id, correct: true},
-{body: 'JavaTestSecondQuestionSecondAnswer', question_id: questions[13].id},
-{body: 'JavaTestSecondQuestionThirdAnswer', question_id: questions[13].id},
+{body: 'JavaTestSecondQuestionFirstAnswer', question: questions[13], correct: true},
+{body: 'JavaTestSecondQuestionSecondAnswer', question: questions[13]},
+{body: 'JavaTestSecondQuestionThirdAnswer', question: questions[13]},
 
-{body: 'JavaTestThirdQuestionFirstAnswer', question_id: questions[14].id},
-{body: 'JavaTestThirdQuestionSecondAnswer', question_id: questions[14].id},
-{body: 'JavaTestThirdQuestionThirdAnswer', question_id: questions[14].id, correct: true}
+{body: 'JavaTestThirdQuestionFirstAnswer', question: questions[14]},
+{body: 'JavaTestThirdQuestionSecondAnswer', question: questions[14]},
+{body: 'JavaTestThirdQuestionThirdAnswer', question: questions[14], correct: true}
 ])
 
 
