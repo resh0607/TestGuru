@@ -16,6 +16,12 @@ tests = Test.create!([
   {title: :Rails, level: 1, category: categories[0], author: users[0]}
 ])
 
+tests_users = TestsUser.create!([
+  {test_id: 1, user_id: 1},
+  {test_id: 2, user_id: 1},
+  {test_id: 4, user_id: 1}
+])
+
 questions = Question.create!([
   {body: 'RubyTestFirstQuestion', test: tests[0]},
   {body: 'RubyTestSecondQuestion', test: tests[0]},
