@@ -6,6 +6,11 @@ class Test < ApplicationRecord
   has_many :tests_users
   has_many :users, through: :tests_users, dependent: :destroy
 
+  validates :title, presence: true,
+                    uniqueness: { scope: :level,
+                      message: "Test with such title and level already exists" }
+  validates :level, numericality: { only_integer: true }
+
   scope :by_level, -> (level) { where(level: level) }
   scope :easy, -> { by_level(0..1) }
   scope :medium, -> { by_level(2..4) }
