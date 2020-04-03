@@ -4,6 +4,6 @@ class User < ApplicationRecord
   has_many :authored_tests, class_name: 'Test', dependent: :nullify
 
   def tests_by_level(level)
-    Test.joins(:tests_users).where(tests_users:{user_id: id}, level: level)
+    self.tests.by_level(level)
   end
 end
