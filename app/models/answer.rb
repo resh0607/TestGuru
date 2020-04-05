@@ -1,9 +1,8 @@
 class Answer < ApplicationRecord
-  
   belongs_to :question
 
   validates :body, presence: true
-  validate :validate_number_of_answers
+  validate :validate_number_of_answers, on: :create
 
   scope :correct, -> { where(correct: true) }
 
