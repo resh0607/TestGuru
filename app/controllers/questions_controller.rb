@@ -1,19 +1,23 @@
 class QuestionsController < ApplicationController
-  before_action :find_test, only: %i[index create ]
+  before_action :find_test, only: %i[index create new]
   before_action :find_question, only: %i[show destroy]
 
   rescue_from ActiveRecord::RecordNotFound, with: :rescue_with_record_not_found
 
   def index
-    render plain: @test.questions.pluck(:body).join("\n")
+    @questions = @test.questions
   end
 
   def show
     @test = @question.test
-    render plain: "Test: #{@test.title}, question: #{@question.body}"
   end
 
   def new
+    @question = Question.new
+  end
+
+  def edit
+    @question = Question.find(params[:id])
   end
 
   def create
@@ -22,6 +26,16 @@ class QuestionsController < ApplicationController
       redirect_to test_questions_path(@test)
     else
       render 'new'
+    end
+  end
+
+  def update
+    @question = Question.find(params[:id])
+
+    if @question.update(question_params)
+      redirect_to @question
+    else
+      render :edit
     end
   end
 
