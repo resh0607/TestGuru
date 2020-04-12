@@ -10,6 +10,17 @@
   </head>
 
   <body>
-    <%= yield %>
+    <div class="content">
+      <div class="content-inside">
+        <%= yield %>
+      </div>
+    </div>
+    <footer class="footer">
+      <%= link_to 'TestGuru', 'https://github.com/resh0607/TestGuru' %>
+      <span>- проверьте свои знания в IT</span></br>
+      <%= link_to 'Учебный проект в онлайн-школе Thinknetica', 'https://thinknetica.com' %></br>
+      <span>Автор: Иван Решетняк</span></br>
+      <span><%= Time.now.year %></span>
+    </footer>
   </body>
 </html>
