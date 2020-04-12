@@ -1,0 +1,16 @@
+<h2>List of tests</h2>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Count of questions</th>
+  </tr>
+
+  <% @tests.each do |test| %>
+    <tr>
+      <td><%= test.title %></td>
+      <td><%= test.questions.count %></td>
+    </tr>
+  <% end %>
+</table>
+    
