@@ -4,10 +4,6 @@ class QuestionsController < ApplicationController
 
   rescue_from ActiveRecord::RecordNotFound, with: :rescue_with_record_not_found
 
-  def index
-    @questions = @test.questions
-  end
-
   def show
     @test = @question.test
   end
