@@ -2,7 +2,7 @@
 
 <%= @test.title %>
 <p>
-  <%= link_to 'New question', "/tests/#{@test.id}/questions/new" %>
+  <%= link_to 'New question', new_test_question_path(@test) %>
 </p>
 
 <h2>Questions</h2>
