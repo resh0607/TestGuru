@@ -1,9 +1,6 @@
-<h1>Passing <%= @test_passage.test.title %></h1>
+<h1>Passing <%= @test_passage.test.title %> test</h1>
 
-<b>
-  <%= @test_passage.current_question.body %>
-</b>
-</br>
+<b><%= @test_passage.current_question.body %></b></br>
 
 <p>
   <span>Contains <%= @test_passage.test.questions.count %> questions</span></br>
