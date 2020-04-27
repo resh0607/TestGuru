@@ -13,6 +13,9 @@
     <div class="content">
       <div class="content-inside">
         <%= link_to 'Home', root_path %>
+        <% if logged_in? %>
+          <p class="nav user">Welcome, <b><%= current_user.name %></b></p>
+        <% end %>
         <%= yield %>
       </div>
     </div>
