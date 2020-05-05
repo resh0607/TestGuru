@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
 
     if user&.authenticate(params[:password])
       session[:user_id] = user.id
-      redirect_to tests_path
+      redirect_back_or root_path
     else
       flash.now[:alert] = 'Check your credentials'
       render :new
