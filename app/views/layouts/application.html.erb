@@ -12,22 +12,11 @@
   <body>
     <div class="content">
       <div class="content-inside">
-        <%= link_to 'Home', root_path %>
-        <% if logged_in? %>
-          <p class="nav user">Welcome <%= current_user.name %> | <%= link_to 'logout', sessions_destroy_path %></p>
-        <% else %>
-          <p class="nav user"><%= link_to 'login', login_path %></p>
-        <% end %>
+        <%= render 'shared/topmenu' %>
         <%= render 'shared/flash' if !flash.empty? %>
         <%= yield %>
       </div>
     </div>
-    <footer class="footer">
-      <%= github_url('resh0607', 'TestGuru') %>
-      <span>- проверьте свои знания в IT</span></br>
-      <%= link_to 'Учебный проект в онлайн-школе Thinknetica', 'https://thinknetica.com', target: '_blank' %></br>
-      <span>Автор: Иван Решетняк</span></br>
-      <span><%= current_year %></span>
-    </footer>
+    <%= render 'shared/footer' %>
   </body>
 </html>

@@ -1,0 +1,6 @@
+<%= link_to 'Home', root_path %>
+<% if logged_in? %>
+  <p class="nav user">Welcome <%= current_user.name %> | <%= link_to 'logout', sessions_destroy_path %></p>
+<% else %>
+  <p class="nav user"><%= link_to 'login', login_path %></p>
+<% end %>
