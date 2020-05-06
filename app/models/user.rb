@@ -4,6 +4,10 @@ class User < ApplicationRecord
 
   include Auth
 
+  validates :email, uniqueness: true,
+                    format: { with: /\A[^@]+@[^@.]+\.[^@]+$\z/, message: 'Incorrect format' }
+    
+
   has_many :test_passages
   has_many :tests, through: :test_passages, dependent: :destroy
   has_many :authored_tests, class_name: 'Test', dependent: :nullify
