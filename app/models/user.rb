@@ -1,7 +1,5 @@
-require 'digest/sha1'
-
 class User < ApplicationRecord
-  
+
   devise  :database_authenticatable,
           :registerable,
           :recoverable,
@@ -9,12 +7,6 @@ class User < ApplicationRecord
           :trackable,
           :validatable,
           :confirmable
-
-  include Auth
-
-  validates :email, uniqueness: true,
-                    format: { with: /\A[^@]+@[^@.]+\.[^@]+$\z/, message: 'Incorrect format' }
-    
 
   has_many :test_passages
   has_many :tests, through: :test_passages, dependent: :destroy
