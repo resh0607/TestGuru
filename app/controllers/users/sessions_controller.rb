@@ -9,9 +9,10 @@ class Users::SessionsController < Devise::SessionsController
   # end
 
   # POST /resource/sign_in
-  # def create
-  #   super
-  # end
+  def create
+    super
+    flash[:notice] = "Hi, #{User.find_by(email: params[:user][:email]).name}"
+  end
 
   # DELETE /resource/sign_out
   # def destroy
