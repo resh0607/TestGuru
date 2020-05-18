@@ -11,8 +11,7 @@ class Users::SessionsController < Devise::SessionsController
   # POST /resource/sign_in
   def create
     super
-    user = User.find_by(email: params[:user][:email])
-    flash[:notice] = "Hi, #{user.name.empty? ? user.email : user.name}"
+    flash[:notice] = "Hi, #{current_user.full_name}"
   end
 
   # DELETE /resource/sign_out

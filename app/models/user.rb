@@ -23,4 +23,9 @@ class User < ApplicationRecord
   def admin?
     self.is_a?(Admin)
   end
+
+  def full_name
+    name.empty? ? email : name
+  end
+
 end

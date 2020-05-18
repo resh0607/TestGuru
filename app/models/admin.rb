@@ -1,6 +1,4 @@
 class Admin < User
 
-  validates :name, presence: true
-  validates :last_name, presence: true
-  
+  validates_presence_of :name, :last_name
 end
