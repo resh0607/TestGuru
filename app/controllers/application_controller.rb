@@ -1,5 +1,7 @@
 class ApplicationController < ActionController::Base
 
+  before_action :set_locale
+
   helper_method :redirect_back_or
 
   def after_sign_in_path_for(user)
@@ -10,7 +12,15 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  def default_url_options
+    { lang: I18n.locale }
+  end
+
   private
+
+  def set_locale
+    I18n.locale = I18n.locale_available?(params[:lang]) ? params[:lang] : I18n.default_locale
+  end
 
   def store_location
     cookies[:forwarding_url] = request.original_url if request.get?
