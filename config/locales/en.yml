@@ -43,12 +43,27 @@ en:
         level: "Level"
         category_id: "Category"
 
+  shared:
+    errors:
+      header:
+        one: "%{count} error detected"
+        other: "%{count} errors detected"
+
   tests:
     index:
       header: 'Available tests'
+
+  test_passages:
+    result:
+      header: "Test %{title} passed"
+
   admin:
     tests:
       create:
         success: 'Test has been created'
       index:
         header: 'Available tests'
+
+  tests_mailer:
+    completed_test:
+      subject: "You completed the test"

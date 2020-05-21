@@ -1,4 +1,4 @@
-<h1><%= @test_passage.test.title %> test was completed!</h2>
+<h1><%= t('.header', title: @test_passage.test.title) %></h2>
 
 <% if @test_passage.passed? %>
   <p>Your score <span class="color_green"><%= @test_passage.result_percent %></span> %. Test passed.</p>

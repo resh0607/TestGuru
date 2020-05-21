@@ -10,13 +10,29 @@ ru:
         level: "Уровень"
         category_id: "Категория"
 
-
+  shared:
+    errors:
+      header:
+        few: "Обнаружено %{count} ошибки"
+        many: "Обнаружено %{count} ошибок"
+        one: "Обнаружено %{count} ошибка"
+        other: "Обнаружено %{count} ошибки"
+        
   tests:
     index:
       header: 'Доступные тесты'
+
+  test_passages:
+    result:
+      header: "Тест %{title} успешно завершен"
+
   admin:
     tests:
       create:
         success: 'Тест успешно создан'
       index:
         header: 'Доступные тесты'
+
+  tests_mailer:
+    completed_test:
+      subject: "Вы завершили тест"
