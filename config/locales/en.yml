@@ -51,7 +51,12 @@ en:
 
   tests:
     index:
-      header: 'Available tests'
+      header: "Available tests"
+      title: "Title"
+      level: "Level"
+      count_of_questions: "Count of questions"
+    test:
+      start: "Start test"
 
   test_passages:
     result:
@@ -60,9 +65,39 @@ en:
   admin:
     tests:
       create:
-        success: 'Test has been created'
+        success: "Test has been created"
       index:
-        header: 'Available tests'
+        header: "Available tests"
+        title: "Title"
+        level: "Level"
+        count_of_questions: "Count of questions"
+        actions: "Actions"
+        create_test: "Create test"
+      new:
+        header: "Create new test"
+        cancel: "Cancel"
+      edit:
+        header: "Edit test %{title}"
+      show:
+        add_new_question: "New question"
+        header: "Test %{title}"
+        questions_list: "List of questions"
+        question_body: "Body"
+        actions: "Actions"
+        back: "Back"
+      test:
+        show: "Show"
+        edit: "Edit"
+        delete: "Delete"
+        confirmation: "Are you sure?"
+    questions:
+      question:
+        show: "Show"
+        edit: "Edit"
+        delete: "Delete"
+    nav:
+      welcome: "Welcome"
+      logout: "Logout"
 
   tests_mailer:
     completed_test:

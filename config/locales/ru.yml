@@ -20,7 +20,12 @@ ru:
         
   tests:
     index:
-      header: 'Доступные тесты'
+      header: "Доступные тесты"
+      title: "Название"
+      level: "Уровень"
+      count_of_questions: "Количество вопросов"
+    test:
+      start: "Начать тест"
 
   test_passages:
     result:
@@ -29,9 +34,39 @@ ru:
   admin:
     tests:
       create:
-        success: 'Тест успешно создан'
+        success: "Тест успешно создан"
       index:
-        header: 'Доступные тесты'
+        header: "Доступные тесты"
+        title: "Название"
+        level: "Уровень"
+        count_of_questions: "Количество вопросов"
+        actions: "Действия"
+        create_test: "Создать тест"
+      new:
+        header: "Создать новый тест"
+        cancel: "Отмена"
+      edit:
+        header: "Редактировать тест %{title}"
+      show:
+        add_new_question: "Новый вопрос"
+        header: "Тест %{title}"
+        questions_list: "Список вопросов"
+        question_body: "Вопрос"
+        actions: "Действия"
+        back: "Назад"
+      test:
+        show: "Показать"
+        edit: "Изменить"
+        delete: "Удалить"
+        confirmation: "Вы уверены?"
+    questions:
+      question:
+        show: "Показать"
+        edit: "Изменить"
+        delete: "Удалить"
+    nav:
+      welcome: "Привет"
+      logout: "Выйти"
 
   tests_mailer:
     completed_test:
