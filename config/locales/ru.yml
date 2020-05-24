@@ -4,11 +4,21 @@ ru:
       test:
         create: "Создать тест"
         update: "Обновить тест"
+      user:
+        sign_up: "Зарегистрироваться"
     label:
       test:
         title: "Название"
         level: "Уровень"
         category_id: "Категория"
+      user:
+        email: "Email"
+        password: "Пароль"
+        remember_me: "Запомнить"
+        name: "Имя"
+        last_name: "Фамилия"
+        password_confirmation: "Подтверждение пароля"
+
 
   shared:
     errors:

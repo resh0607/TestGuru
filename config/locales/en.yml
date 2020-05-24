@@ -37,11 +37,20 @@ en:
       test:
         create: "Create test"
         update: "Update test"
+      user:
+        sign_up: "Sign up"
     label:
       test:
         title: "Title"
         level: "Level"
         category_id: "Category"
+      user:
+        email: "Email"
+        password: "Password"
+        remember_me: "Remember me"
+        name: "Name"
+        last_name: "Last name"
+        password_confirmation: "Password confirmation"
 
   shared:
     errors:
