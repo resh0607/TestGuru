@@ -18,6 +18,8 @@ ru:
         name: "Имя"
         last_name: "Фамилия"
         password_confirmation: "Подтверждение пароля"
+    select:
+      prompt: "Выберите категорию"
 
 
   shared:

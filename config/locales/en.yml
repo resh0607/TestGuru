@@ -51,6 +51,8 @@ en:
         name: "Name"
         last_name: "Last name"
         password_confirmation: "Password confirmation"
+    select:
+      prompt: "Choose category"
 
   shared:
     errors:
