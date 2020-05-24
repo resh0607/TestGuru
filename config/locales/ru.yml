@@ -17,6 +17,11 @@ ru:
         many: "Обнаружено %{count} ошибок"
         one: "Обнаружено %{count} ошибка"
         other: "Обнаружено %{count} ошибки"
+    nav: 
+      welcome: "Привет"
+      login: "Войти"
+      logout: "Выйти"
+      create_account: "Зарегистрироваться"
         
   tests:
     index:
@@ -30,6 +35,15 @@ ru:
   test_passages:
     result:
       header: "Тест %{title} успешно завершен"
+    show:
+      header: "Вы проходите %{title} тест"
+      questions_quantity:
+        few: "Включает %{count} вопроса"
+        many: "Включает %{count} вопросов"
+        one: "Включает %{count} вопрос"
+        other: "Включает %{count} вопроса"
+      question_number: "Номер текущего вопроса - %{number}"
+      next_button: "вперед"
 
   admin:
     tests:
@@ -67,6 +81,7 @@ ru:
     nav:
       welcome: "Привет"
       logout: "Выйти"
+      admin_panel: "Панель администратора"
 
   tests_mailer:
     completed_test:

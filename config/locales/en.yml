@@ -48,6 +48,11 @@ en:
       header:
         one: "%{count} error detected"
         other: "%{count} errors detected"
+    nav: 
+      welcome: "Welcome"
+      login: "Login"
+      logout: "Logout"
+      create_account: "Create account"
 
   tests:
     index:
@@ -61,7 +66,13 @@ en:
   test_passages:
     result:
       header: "Test %{title} passed"
-
+    show:
+      header: "You are passing the %{title} test"
+      questions_quantity:
+        one: "Contains %{count} question"
+        other: "Contains %{count} questions"
+      question_number: "Current question number - %{number}"
+      next_button: "next"
   admin:
     tests:
       create:
@@ -98,6 +109,7 @@ en:
     nav:
       welcome: "Welcome"
       logout: "Logout"
+      admin_panel: "Admin Panel"
 
   tests_mailer:
     completed_test:
