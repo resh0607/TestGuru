@@ -1,5 +1,8 @@
 <nav class="navbar navbar-light bg-light">
   <%= link_to t('.admin_panel'), admin_tests_path, class: 'navbar-brand' %>
+  <%= link_to root_path, class: 'mr-auto' do %>
+    <i class="fas fa-users"></i>
+  <% end %>
   <span class="navbar-text">
       <%= t('.welcome') %> <%= current_user.name %> Guru | <%= link_to t('.logout'), destroy_user_session_path, method: :delete %>
   </span>

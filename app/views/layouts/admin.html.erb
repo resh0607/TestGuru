@@ -10,13 +10,11 @@
   </head>
 
   <body>
-    <div class="content">
-      <div class="content-inside">
-        <%= render 'admin/nav' %>
+    <%= render 'admin/nav' %>
+    <div class="container">
         <%= render 'shared/flash' if !flash.empty? %>
         <%= yield %>
-      </div>
     </div>
-    <%= render 'shared/footer' %>
   </body>
+  <%= render 'shared/footer' %>
 </html>

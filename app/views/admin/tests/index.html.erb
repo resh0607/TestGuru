@@ -1,12 +1,13 @@
 <h2><%= t('.header') %></h2>
 
-<table>
-  <tr>
-    <th><%= t('.title')%></th>
-    <th><%= t('.level')%></th>
-    <th><%= t('.count_of_questions')%></th>
-    <th colspan="3"><%= t('.actions')%></th>
-  </tr>
+<table class="table table-bordered table-dark">
+  <thead>
+    <tr align="center">
+      <th><%= t('.title')%></th>
+      <th><%= t('.level')%></th>
+      <th><%= t('.count_of_questions')%></th>
+      <th colspan="3"><%= t('.actions')%></th>
+    </tr>
 
   <%= render @tests %>
 </table></br>
