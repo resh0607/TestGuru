@@ -1,14 +1,12 @@
 <h2><%= t('.header') %></h2>
-
 <table class="table">
   <thead class="thead-dark">
-    <tr>
+    <tr align="center">
       <th><%= t('.title')%></th>
       <th><%= t('.level')%></th>
       <th><%= t('.count_of_questions')%></th>
-      <th><%= t('.start')%></th>
+      <th><i class="fas fa-history"></i></th>
     </tr>
   </thead>
   <%= render @tests %>
-
 </table></br>
