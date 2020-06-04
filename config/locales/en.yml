@@ -79,7 +79,8 @@ en:
       header: "Test %{title} passed"
     gist:
       success: "Gist successfuly saved"
-      failure: "Gist didn`t save, something gone wrong"
+      failure: "Gist didn`t save, something went wrong"
+      view_gist: "View gist"
     show:
       header: "You are passing the %{title} test"
       questions_quantity:

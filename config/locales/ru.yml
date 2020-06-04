@@ -49,8 +49,9 @@ ru:
     result:
       header: "Тест %{title} успешно завершен"
     gist:
-      success: "Gist успешно сохранен"
+      success: "Gist был успешно сохранён."
       failure: "Во время сохрания gist произошла ошибка"
+      view_gist: "Посмотреть gist"
     show:
       header: "Вы проходите %{title} тест"
       questions_quantity:
