@@ -23,6 +23,7 @@ class TestPassagesController < ApplicationController
     result = GistQuestionService.new(@test_passage.current_question).call
 
     flash_options = if result.url.present?
+      current_user.gists.create(question: @test_passage.current_question, url: result.html_url)
       { notice: t('.success') + " #{view_context.link_to t('.view_gist'), result.html_url }" }
     else
       { alert: t('.failure') }

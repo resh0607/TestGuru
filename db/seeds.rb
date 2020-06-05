@@ -1,6 +1,6 @@
 # ruby encoding: utf-8
 
-users = User.create!([{name: :Ivan, email: 'foo@bar.com', password: '1234'}])
+users = User.create!([{name: :Ivan, last_name: 'Reshetnyak', email: 'foo@bar.com', password: '05399481', type: 'Admin'}])
 
 categories = Category.create!([
   {title: :Backend},

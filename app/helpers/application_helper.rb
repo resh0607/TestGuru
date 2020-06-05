@@ -17,4 +17,8 @@ module ApplicationHelper
     }[name.to_sym] || name
   end
 
+  def gist_hash_link(gist)
+    link_to "#{gist.url.split('https://gist.github.com/')[1]}", gist.url, target: '_blank'
+  end
+
 end
