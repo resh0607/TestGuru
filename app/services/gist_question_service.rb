@@ -7,7 +7,11 @@ class GistQuestionService
   end
 
   def call
-    @client.create_gist(gist_params)
+    @created_gist = @client.create_gist(gist_params)
+  end
+
+  def success?
+    @created_gist.html_url.present?
   end
 
   private
