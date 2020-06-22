@@ -24,11 +24,12 @@ function formInlineHandler(testId) {
 
   $formInline.toggle()
   $testTitle.toggle()
-
-  if ($formInline.is(':visible')) {
-    link.textContent = 'Cancel'
-  } else {
-    link.textContent = 'Edit'
+  if ($formInline) {
+    if ($formInline.is(':visible')) {
+      link.textContent = 'Cancel'
+    } else {
+      link.textContent = 'Edit'
+    }
   }
 }
  
