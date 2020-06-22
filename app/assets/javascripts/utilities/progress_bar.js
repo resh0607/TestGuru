@@ -1,15 +1,12 @@
 document.addEventListener('turbolinks:load', function() {
-  var control = document.querySelector('.progress-bar')
+  var progressBar = document.querySelector('.progress-bar')
 
-  if (control) {
-    showProgress(control)
-  }
+  if (progressBar) { progressBarHandler(progressBar) }
 })
 
-function showProgress(control) {
-  var progress = control.dataset.progress
-  var currentProgressValue = control.getAttribute('aria-valuenow')
+function progressBarHandler(progressBar) {
+  var progress = progressBar.dataset.progress
 
-  currentProgressValue = progress
-  control.style.width = progress + '%'
+  progressBar.style.width = progress + '%'
+  progressBar.setAttribute('aria-valuenow', progress)
 }
