@@ -116,6 +116,8 @@ en:
         edit: "Edit"
         delete: "Delete"
         confirmation: "Are you sure?"
+      form_inline:
+        submit: 'Ok' 
     questions:
       question:
         show: "Show"
