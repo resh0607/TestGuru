@@ -6,10 +6,10 @@ class FeedbacksController < ApplicationController
 
   def create
     @feedback = Feedback.new(feedback_params)
-    if @feedback.save
+    if @feedback.valid?
       FeedbacksMailer.send_message(@feedback).deliver_now
-      flash[:notice] = 'We wil try to answer you as soon as possible'
-      redirect_to root_path
+      flash[:notice] = t('.success_feedback')
+      redirect_to new_feedback_path
     else
       render :new
     end

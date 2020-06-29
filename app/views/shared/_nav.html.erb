@@ -1,16 +1,24 @@
-<nav class="navbar navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
   <%= link_to 'TestGuru', root_path, class: 'navbar-brand' %>
-    <% if current_user&.admin? %>
-      <%= link_to admin_tests_path, class: 'mr-auto' do %>
-        <i class="fas fa-user-cog"></i>
+  <div class="collapse navbar-collapse">
+    <ul class="navbar-nav mr-auto">
+      <% if current_user&.admin? %>
+        <li class="nav-item mx-3">
+          <%= link_to admin_tests_path do %>
+            <i class="fas fa-user-cog" ></i>
+          <% end %>
+        </li>
       <% end %>
-    <% end %>
-  <%= link_to 'Feedback', new_feedback_path, class: 'mr-auto'  %>
-  <span class="navbar-text">
-    <% if user_signed_in? %>
-      <%= t('.welcome') %> <%= current_user.name %> Guru | <%= link_to t('.logout'), destroy_user_session_path, method: :delete %>
-    <% else %>
-      <%= link_to t('.login'), new_user_session_path %> | <%= link_to t('.create_account'), new_user_registration_path %>
-    <% end %>
-  </span>
+      <li class="nav-item">
+        <%= link_to 'Feedback', new_feedback_path %>
+      </li>
+    </ul>
+    <span class="navbar-text">
+      <% if user_signed_in? %>
+        <%= t('.welcome') %> <%= current_user.name %> Guru | <%= link_to t('.logout'), destroy_user_session_path, method: :delete %>
+      <% else %>
+        <%= link_to t('.login'), new_user_session_path %> | <%= link_to t('.create_account'), new_user_registration_path %>
+      <% end %>
+    </span>
+  </div>
 </nav>

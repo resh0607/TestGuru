@@ -1,10 +1,10 @@
 class FeedbacksMailer < ApplicationMailer
-  default to: 'resh0607@mail.ru'
+  default to: ENV['ADMIN_EMAIL']
 
   def send_message(feedback)
     @email = feedback.email
     @message = feedback.message
 
-    mail from: @email, subject: 'There is new feedback'
+    mail from: @email, subject: t('.subject')
   end
 end
