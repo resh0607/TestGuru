@@ -112,6 +112,7 @@ ru:
 
   feedbacks_mailer:
     subject: "Новое сообщение с портала TestGuru"
+
   services:
     gist_question_service:
       header: "Вопрос %{title} из TestGuru "
