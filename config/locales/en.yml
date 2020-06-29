@@ -74,6 +74,10 @@ en:
     test:
       start: "Start test"
 
+  feedbacks:
+    create:
+      success_feedback: "Your message has been sent"
+
   test_passages:
     result:
       header: "Test %{title} passed"
@@ -131,6 +135,9 @@ en:
   tests_mailer:
     completed_test:
       subject: "You completed the test"
+
+  feedbacks_mailer:
+    subject: "New message from TestGuru"
 
   services:
     gist_question_service:

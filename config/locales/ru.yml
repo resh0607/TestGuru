@@ -45,6 +45,10 @@ ru:
     test:
       start: "Начать тест"
 
+  feedbacks:
+    create:
+      success_feedback: "Ваше сообщение отправлено"
+
   test_passages:
     result:
       header: "Тест %{title} успешно завершен"
@@ -106,6 +110,8 @@ ru:
     completed_test:
       subject: "Вы завершили тест"
 
+  feedbacks_mailer:
+    subject: "Новое сообщение с портала TestGuru"
   services:
     gist_question_service:
       header: "Вопрос %{title} из TestGuru "
