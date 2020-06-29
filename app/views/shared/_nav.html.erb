@@ -5,6 +5,7 @@
         <i class="fas fa-user-cog"></i>
       <% end %>
     <% end %>
+  <%= link_to 'Feedback', new_feedback_path, class: 'mr-auto'  %>
   <span class="navbar-text">
     <% if user_signed_in? %>
       <%= t('.welcome') %> <%= current_user.name %> Guru | <%= link_to t('.logout'), destroy_user_session_path, method: :delete %>
