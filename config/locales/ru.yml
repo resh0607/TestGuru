@@ -89,6 +89,7 @@ ru:
         question_body: "Вопрос"
         actions: "Действия"
         back: "Назад"
+        edit_test: "Редактировать тест"
       test:
         show: "Показать"
         edit: "Изменить"

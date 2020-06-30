@@ -115,6 +115,7 @@ en:
         question_body: "Body"
         actions: "Actions"
         back: "Back"
+        edit_test: "Edit test"
       test:
         show: "Show"
         edit: "Edit"
