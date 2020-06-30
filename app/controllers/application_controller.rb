@@ -22,4 +22,8 @@ class ApplicationController < ActionController::Base
     redirect_to(cookies[:forwarding_url] || default)
     cookies.delete(:forwarding_url)
   end
+
+  def after_sign_in_path_for(user)
+    user.admin? ? admin_tests_path : tests_path
+  end
 end
