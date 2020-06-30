@@ -21,14 +21,16 @@ function formInlineHandler(testId) {
   var link = document.querySelector('.form-inline-link[data-test-id="' + testId + '"]')
   var $testTitle = $('.test-title[data-test-id="' + testId + '"]')
   var $formInline = $('.form-inline[data-test-id="' + testId + '"]')
+  var errors = document.querySelector('.resource-errors')
 
   $formInline.toggle()
   $testTitle.toggle()
   if ($formInline) {
     if ($formInline.is(':visible')) {
-      link.textContent = 'Cancel'
+      link.textContent = 'Отмена'
     } else {
-      link.textContent = 'Edit'
+      link.textContent = 'Изменить'
+      errors.classList.add('hide')
     }
   }
 }
