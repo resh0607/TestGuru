@@ -25,7 +25,7 @@ function formInlineHandler(testId) {
 
   $formInline.toggle()
   $testTitle.toggle()
-  if ($formInline) {
+  if ($formInline && link) {
     if ($formInline.is(':visible')) {
       link.textContent = 'Отмена'
     } else {
