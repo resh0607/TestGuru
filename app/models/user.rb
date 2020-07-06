@@ -12,6 +12,8 @@ class User < ApplicationRecord
   has_many :tests, through: :test_passages, dependent: :destroy
   has_many :authored_tests, class_name: 'Test', dependent: :nullify
   has_many :gists, dependent: :destroy
+  has_many :badges, through: :achievements
+  has_many :achievements
 
   def tests_by_level(level)
     tests.by_level(level)
