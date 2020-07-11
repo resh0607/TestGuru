@@ -1,7 +1,5 @@
 class BadgeService
 
-  BADGES_GIVING_RULES = ['555', '333']
-  
   attr_accessor :test_passage, :badges, :user, :category, :test_level
 
   def initialize(test_passage)
