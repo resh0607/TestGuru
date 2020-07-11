@@ -32,8 +32,7 @@ class User < ApplicationRecord
     name.empty? ? email : name
   end
 
-  def succesful_tests
-    stub
+  def successful_tests
+    Test.joins(:test_passages).where(test_passages: {success:true, user_id: id})
   end
-
 end

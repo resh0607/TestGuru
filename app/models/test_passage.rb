@@ -36,12 +36,17 @@ class TestPassage < ApplicationRecord
     if correct_answer?(answer_ids)
       self.correct_questions += 1
     end
+    set_success
 
     save!
   end
 
   def number_of_attempts
     TestPassage.where(test: test, user: user).count
+  end
+
+  def set_success
+    self.success = passed?
   end
 
   private
