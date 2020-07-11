@@ -10,10 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_04_110027) do
+ActiveRecord::Schema.define(version: 2020_07_11_074620) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "achievements", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "badge_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["badge_id"], name: "index_achievements_on_badge_id"
+    t.index ["user_id"], name: "index_achievements_on_user_id"
+  end
 
   create_table "answers", force: :cascade do |t|
     t.text "body", null: false
@@ -22,6 +31,14 @@ ActiveRecord::Schema.define(version: 2020_06_04_110027) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["question_id"], name: "index_answers_on_question_id"
+  end
+
+  create_table "badges", force: :cascade do |t|
+    t.string "name", null: false
+    t.text "image_url", null: false
+    t.string "rule_name", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "categories", force: :cascade do |t|
@@ -55,6 +72,7 @@ ActiveRecord::Schema.define(version: 2020_06_04_110027) do
     t.integer "correct_questions", default: 0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "success", default: false, null: false
     t.index ["current_question_id"], name: "index_test_passages_on_current_question_id"
     t.index ["test_id"], name: "index_test_passages_on_test_id"
     t.index ["user_id"], name: "index_test_passages_on_user_id"
@@ -98,6 +116,8 @@ ActiveRecord::Schema.define(version: 2020_06_04_110027) do
     t.index ["type"], name: "index_users_on_type"
   end
 
+  add_foreign_key "achievements", "badges"
+  add_foreign_key "achievements", "users"
   add_foreign_key "gists", "questions"
   add_foreign_key "gists", "users"
 end

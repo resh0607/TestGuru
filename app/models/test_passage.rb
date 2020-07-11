@@ -40,6 +40,10 @@ class TestPassage < ApplicationRecord
     save!
   end
 
+  def number_of_attempts
+    TestPassage.where(test: test, user: user).count
+  end
+
   private
   
   def set_current_question
