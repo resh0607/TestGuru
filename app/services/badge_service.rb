@@ -14,10 +14,10 @@ class BadgeService
     correct_badges = Badge.all.select { |b| self.respond_to?("rule_#{b.rule_name}") }
     correct_badges.each do |b|
       if send("rule_#{b.rule_name.to_sym}")
-          badges << b
+          @badges << b
       end
     end
-    badges
+    @badges
   end
 
   def rule_test_in_one_attempt
@@ -25,10 +25,10 @@ class BadgeService
   end
 
   def rule_category_guru
-    user.successful_tests.where(category: category).length == category.tests.length
+    user.successful_tests.where(category: category).uniq.length == category.tests.length
   end
 
   def rule_level_guru
-    user.successful_tests.where(level: test_level).length == Test.all.where(level: test_level).length
+    user.successful_tests.where(level: test_level).uniq.length == Test.all.where(level: test_level).length
   end
 end
