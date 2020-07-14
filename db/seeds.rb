@@ -98,5 +98,9 @@ answers = Answer.create!([
 ])
 
 
-
+badges = Badge.create!([
+  {name: 'star', image_url: '55555', rule_name: 'test_in_one_attempt'},
+  {name: 'cup', image_url: '77777', rule_name: 'category_guru'},
+  {name: 'medal', image_url: '88888', rule_name: 'level_guru'}
+])
 
