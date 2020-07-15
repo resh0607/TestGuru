@@ -1,13 +1,13 @@
 class BadgeService
 
-  attr_accessor :test_passage, :badges, :user, :category, :test_level
+  attr_accessor :test_passage, :badges, :user, :category, :test
 
   def initialize(test_passage)
     @test_passage = test_passage
     @badges = []
     @user = test_passage.user
     @category = test_passage.test.category
-    @test_level = @test_passage.test.level
+    @test = @test_passage.test
   end
 
   def call
@@ -34,12 +34,17 @@ class BadgeService
     successful_tests.uniq.length == category.tests.length
   end
 
-  def rule_level_guru(*args)
-    user.successful_tests.where(level: test_level).uniq.length == Test.all.where(level: test_level).length
+  def rule_level_guru(badge)
+    successful_tests = if already_has_badge?(badge)
+      successful_tests_after_badge(badge)
+    else
+      user.successful_tests.by_level(test.level)
+    end
+    successful_tests.uniq.length == Test.by_level(test.level).length
   end
 
   def successful_tests_after_badge(badge)
-    Test.joins(:test_passages).where('test_passages.updated_at > ? AND test_passages.user_id = ?', user.achievements.where(badge_id: badge.id).last.updated_at, user.id )
+    Test.joins(:test_passages).where('test_passages.updated_at > ? AND test_passages.user_id = ? AND test_passages.success = ?', user.achievements.where(badge_id: badge.id).last.updated_at, user.id, true )
   end
 
   def already_has_badge?(badge)
