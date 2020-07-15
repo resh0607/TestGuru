@@ -36,13 +36,13 @@ questions = Question.create!([
 
 answers = Answer.create!([
 
-{body: 'RubyTestFirstQuestionFirstAnswer', question: questions[0]},
-{body: 'RubyTestFirstQuestionSecondAnswer', question: questions[0], correct: true},
+{body: 'RubyTestFirstQuestionFirstAnswer', question: questions[0], correct: true},
+{body: 'RubyTestFirstQuestionSecondAnswer', question: questions[0]},
 {body: 'RubyTestFirstQuestionThirdAnswer', question: questions[0]},
 
-{body: 'RubyTestSecondQuestionFirstAnswer', question: questions[1]},
+{body: 'RubyTestSecondQuestionFirstAnswer', question: questions[1], correct: true},
 {body: 'RubyTestSecondQuestionSecondAnswer', question: questions[1]},
-{body: 'RubyTestSecondQuestionThirdAnswer', question: questions[1], correct: true},
+{body: 'RubyTestSecondQuestionThirdAnswer', question: questions[1]},
 
 {body: 'RubyTestThirdQuestionFirstAnswer', question: questions[2], correct: true},
 {body: 'RubyTestThirdQuestionSecondAnswer', question: questions[2]},
@@ -52,49 +52,49 @@ answers = Answer.create!([
 {body: 'HTMLTestFirstQuestionSecondAnswer', question: questions[3]},
 {body: 'HTMLTestFirstQuestionThirdAnswer', question: questions[3]},
 
-{body: 'HTMLTestSecondtQuestionFirstAnswer', question: questions[4]},
-{body: 'HTMLTestSecondQuestionSecondAnswer', question: questions[4], correct: true},
+{body: 'HTMLTestSecondtQuestionFirstAnswer', question: questions[4], correct: true},
+{body: 'HTMLTestSecondQuestionSecondAnswer', question: questions[4]},
 {body: 'HTMLTestSecondQuestionThirdAnswer', question: questions[4]},
 
 {body: 'HTMLTestThirdQuestionFirstAnswer', question: questions[5], correct: true},
 {body: 'HTMLTestThirdQuestionSecondAnswer', question: questions[5]},
 {body: 'HTMLTestThirdQuestionThirdAnswer', question: questions[5]},
 
-{body: 'SQLTestFirstQuestionFirstAnswer', question: questions[6]},
+{body: 'SQLTestFirstQuestionFirstAnswer', question: questions[6], correct: true},
 {body: 'SQLTestFirstQuestionSecondAnswer', question: questions[6]},
-{body: 'SQLTestFirstQuestionThirdAnswer', question: questions[6], correct: true},
+{body: 'SQLTestFirstQuestionThirdAnswer', question: questions[6]},
 
-{body: 'SQLTestSecondQuestionFirstAnswer', question: questions[7]},
-{body: 'SQLTestSecondQuestionSecondAnswer', question: questions[7], correct: true},
+{body: 'SQLTestSecondQuestionFirstAnswer', question: questions[7], correct: true},
+{body: 'SQLTestSecondQuestionSecondAnswer', question: questions[7]},
 {body: 'SQLTestSecondQuestionThirdAnswer', question: questions[7]},
 
 {body: 'SQLTestThirdQuestionFirstAnswer', question: questions[8], correct: true},
 {body: 'SQLTestThirddQuestionSecondAnswer', question: questions[8]},
 {body: 'SQLTestThirdQuestionThirdAnswer', question: questions[8]},
 
-{body: 'RailsTestFirstQuestionFirstAnswer', question: questions[9]},
+{body: 'RailsTestFirstQuestionFirstAnswer', question: questions[9], correct: true},
 {body: 'RailsTestFirstQuestionSecondAnswer', question: questions[9]},
-{body: 'RailsTestFirstQuestionThirdAnswer', question: questions[9], correct: true},
+{body: 'RailsTestFirstQuestionThirdAnswer', question: questions[9]},
 
 {body: 'RailsTestSecondQuestionFirstAnswer', question: questions[10], correct: true},
 {body: 'RailsTestSecondQuestionSecondAnswer', question: questions[10]},
 {body: 'RailsTestSecondQuestionThirdAnswer', question: questions[10]},
 
-{body: 'RailsTestThirdQuestionFirstAnswer', question: questions[11]},
-{body: 'RailsTestThirdQuestionSecondAnswer', question: questions[11], correct: true},
+{body: 'RailsTestThirdQuestionFirstAnswer', question: questions[11], correct: true},
+{body: 'RailsTestThirdQuestionSecondAnswer', question: questions[11]},
 {body: 'RailsTestThirdQuestionThirdAnswer', question: questions[11]},
 
-{body: 'JavaTestFirstQuestionFirstAnswer', question: questions[12]},
-{body: 'JavaTestFirstQuestionSecondAnswer', question: questions[12], correct: true},
+{body: 'JavaTestFirstQuestionFirstAnswer', question: questions[12], correct: true},
+{body: 'JavaTestFirstQuestionSecondAnswer', question: questions[12]},
 {body: 'JavaTestFirstQuestionThirdAnswer', question: questions[12]},
 
 {body: 'JavaTestSecondQuestionFirstAnswer', question: questions[13], correct: true},
 {body: 'JavaTestSecondQuestionSecondAnswer', question: questions[13]},
 {body: 'JavaTestSecondQuestionThirdAnswer', question: questions[13]},
 
-{body: 'JavaTestThirdQuestionFirstAnswer', question: questions[14]},
+{body: 'JavaTestThirdQuestionFirstAnswer', question: questions[14], correct: true},
 {body: 'JavaTestThirdQuestionSecondAnswer', question: questions[14]},
-{body: 'JavaTestThirdQuestionThirdAnswer', question: questions[14], correct: true}
+{body: 'JavaTestThirdQuestionThirdAnswer', question: questions[14]}
 ])
 
 
