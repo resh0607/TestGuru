@@ -92,6 +92,12 @@ en:
         other: "Contains %{count} questions"
       question_number: "Current question number - %{number}"
       next_button: "next"
+  badges:
+    index:
+      header: "Your achievements"
+      achievement: "Achievement"
+      rule: "Reason"
+
   admin:
     tests:
       create:

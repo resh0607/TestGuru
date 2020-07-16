@@ -65,6 +65,11 @@ ru:
         other: "Включает %{count} вопроса"
       question_number: "Номер текущего вопроса - %{number}"
       next_button: "вперед"
+  badges:
+    index:
+      header: "Ваши достижения"
+      achievement: "Достижение"
+      rule: "Основание"
 
   admin:
     tests:
