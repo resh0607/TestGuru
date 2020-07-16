@@ -18,6 +18,10 @@ ru:
         name: "Имя"
         last_name: "Фамилия"
         password_confirmation: "Подтверждение пароля"
+      badge:
+        name: "Название"
+        rule_name: "Правило выдачи"
+
     select:
       prompt: "Выберите категорию"
 
@@ -119,6 +123,8 @@ ru:
         rule_name: "Правило выдачи"
         image_url: "Лого"
         actions: "Действия"
+      new:
+        new_badge: "Создать новый бейдж"
       badge:
         edit: "Изменить"
         delete: "Удалить"
