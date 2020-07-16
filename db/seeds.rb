@@ -97,10 +97,3 @@ answers = Answer.create!([
 {body: 'JavaTestThirdQuestionThirdAnswer', question: questions[14]}
 ])
 
-
-badges = Badge.create!([
-  {name: 'Тест за одну попытку', image_url: 'badges/cup.png', rule_name: 'test_in_one_attempt'},
-  {name: 'Все тесты категории', image_url: 'badges/medal.png', rule_name: 'category_guru'},
-  {name: 'Все тесты уровня', image_url: 'badges/star.png', rule_name: 'level_guru'}
-])
-
