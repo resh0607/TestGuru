@@ -111,6 +111,18 @@ ru:
       welcome: "Привет"
       logout: "Выйти"
       admin_panel: "Панель администратора"
+    badges:
+      index:
+        header: "Бейджи"
+        new_badge: "Создать бейдж"
+        name: "Название"
+        rule_name: "Правило выдачи"
+        image_url: "Лого"
+        actions: "Действия"
+      badge:
+        edit: "Изменить"
+        delete: "Удалить"
+        confirmation: "Вы уверены?"
 
   tests_mailer:
     completed_test:

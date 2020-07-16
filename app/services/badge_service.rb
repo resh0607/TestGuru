@@ -1,5 +1,11 @@
 class BadgeService
 
+  BADGE_GIVING_RULES = %w[
+    test_in_one_attempt
+    category_guru
+    level_guru
+    ] 
+
   attr_accessor :test_passage, :badges, :user, :category, :test
 
   def initialize(test_passage)

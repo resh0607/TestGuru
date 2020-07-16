@@ -138,6 +138,18 @@ en:
       welcome: "Welcome"
       logout: "Logout"
       admin_panel: "Admin Panel"
+    badges:
+      index:
+        header: "Badges"
+        new_badge: "Create badge"
+        name: "Name"
+        rule_name: "Rule"
+        image_url: "Logo"
+        actions: "Actions"
+      badge:
+        edit: "Edit"
+        delete: "Delete"
+        confirmation: "Are you sure?"
 
   tests_mailer:
     completed_test:
