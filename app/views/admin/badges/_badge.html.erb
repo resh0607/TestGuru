@@ -1,0 +1,11 @@
+<tr align="center">
+  <td><%= content_tag :span, badge.name %></td>
+  <td><%= badge.rule_name %></td>
+  <td><%= image_tag badge.image_url, style: 'height: 60px' %></td>
+  <td><%= link_to t('.edit'), edit_admin_badge_path(badge) %></td>
+  <td>
+    <%= link_to t('.delete'), admin_badge_path(badge),
+                method: :delete, 
+                data: {confirm: t('.confirmation')} %>
+  </td>
+</tr>
