@@ -15,7 +15,6 @@ class BadgeService
     correct_badges.each do |b|
       if send("rule_#{b.rule_name.to_sym}", b)
         @badges << b
-
       end
     end
     @badges
@@ -31,7 +30,7 @@ class BadgeService
     else
       user.successful_tests.by_category_title(category.title)
     end
-    successful_tests.uniq.length == category.tests.length
+    successful_tests.uniq.size == category.tests.size
   end
 
   def rule_level_guru(badge)
@@ -40,11 +39,16 @@ class BadgeService
     else
       user.successful_tests.by_level(test.level)
     end
-    successful_tests.uniq.length == Test.by_level(test.level).length
+    successful_tests.uniq.size == Test.by_level(test.level).size
   end
 
   def successful_tests_after_badge(badge)
-    Test.joins(:test_passages).where('test_passages.updated_at > ? AND test_passages.user_id = ? AND test_passages.success = ?', user.achievements.where(badge_id: badge.id).last.updated_at, user.id, true )
+    Test.joins(:test_passages).where('test_passages.updated_at > ? AND
+                                      test_passages.user_id = ? AND
+                                      test_passages.success = ?',
+                                      user.achievements.where(badge_id: badge.id).last.updated_at,
+                                      user.id,
+                                      true)
   end
 
   def already_has_badge?(badge)
