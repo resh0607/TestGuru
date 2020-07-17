@@ -151,6 +151,8 @@ en:
         actions: "Actions"
       new:
         new_badge: "Create new badge"
+      edit:
+        edit_badge: "Edit badge"
       badge:
         edit: "Edit"
         delete: "Delete"

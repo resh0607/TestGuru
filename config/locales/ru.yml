@@ -125,6 +125,8 @@ ru:
         actions: "Действия"
       new:
         new_badge: "Создать новый бейдж"
+      edit:
+        edit_badge: "Редактировать бейдж"
       badge:
         edit: "Изменить"
         delete: "Удалить"
