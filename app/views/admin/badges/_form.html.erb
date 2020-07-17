@@ -4,9 +4,8 @@
     <div class="card border-secondary">
       <div class="card-body">
         <%= form_with model: [:admin, @badge], html: { multipart: true }, local: true do |form| %>
+          <%= render 'shared/errors', resource: @badge %>
           <div class="form-group">
-            <%= render 'shared/errors', resource: @badge %>
-
             <p>
               <%= form.label :name %>
               <%= form.text_field :name, class: 'form-control' %>
