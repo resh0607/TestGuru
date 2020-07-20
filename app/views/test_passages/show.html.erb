@@ -1,5 +1,11 @@
 <h1><%= t('.header', title: @test_passage.test.title) %> </h1>
 
+<%= content_tag :div,
+    class: 'timer',
+    data: { remaining_time: @test_passage.remaining_time } do %>
+  <%= content_tag :span, nil, class: 'timer_label' %>
+<% end %>
+
 <div class="progress">
   <div class="progress-bar" role="progressbar" data-progress="<%= @test_passage.progress_percentage %>" aria-valuemin="0" aria-valuemax="100">
     <%= @test_passage.progress_percentage %>

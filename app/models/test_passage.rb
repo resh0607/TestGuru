@@ -49,6 +49,10 @@ class TestPassage < ApplicationRecord
     self.success = passed?
   end
 
+  def remaining_time
+    (self.test.time_limit * 60 - (Time.current - created_at).seconds).to_i
+  end
+
   private
   
   def set_current_question
