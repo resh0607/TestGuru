@@ -11,6 +11,7 @@ ru:
         title: "Название"
         level: "Уровень"
         category_id: "Категория"
+        time_limit: "Время прохождения"
       user:
         email: "Email"
         password: "Пароль"
@@ -45,6 +46,7 @@ ru:
       title: "Название"
       level: "Уровень"
       count_of_questions: "Количество вопросов"
+      time_limit: "Время прохождения (мин.)"
       
     test:
       start: "Начать тест"
