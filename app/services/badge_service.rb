@@ -1,6 +1,6 @@
 class BadgeService
 
-  BADGE_GIVING_RULES = %w[
+  BADGE_GIVING_RULES = %i[
     test_in_one_attempt
     category_guru
     level_guru
@@ -17,13 +17,11 @@ class BadgeService
   end
 
   def call
-    correct_badges = Badge.all.select { |b| self.respond_to?("rule_#{b.rule_name}") }
-    correct_badges.each do |b|
-      if send("rule_#{b.rule_name.to_sym}", b)
-        @badges << b
+    Badge.all.each do |b|
+      if self.respond_to?("rule_#{b.rule_name}") && send("rule_#{b.rule_name.to_sym}", b)
+        user.badges << b
       end
     end
-    @badges
   end
 
   def rule_test_in_one_attempt(*args)

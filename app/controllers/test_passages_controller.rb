@@ -40,7 +40,7 @@ class TestPassagesController < ApplicationController
   end
 
   def after_test_passing_actions
-    current_user.badges.concat(BadgeService.new(@test_passage).call)
+    BadgeService.new(@test_passage).call
     TestsMailer.completed_test(@test_passage).deliver_now
   end
 end
