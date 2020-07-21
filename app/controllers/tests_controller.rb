@@ -7,8 +7,12 @@ class TestsController < ApplicationController
   end
 
   def start
-    current_user.tests.push(@test)
+    if current_user.test_passage(@test).nil? || current_user.test_passage(@test).completed?
+      current_user.tests.push(@test)
+      redirect_to current_user.test_passage(@test)
+    else
     redirect_to current_user.test_passage(@test)
+    end
   end
 
   private
