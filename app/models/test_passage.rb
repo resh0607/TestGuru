@@ -7,6 +7,7 @@ class TestPassage < ApplicationRecord
   belongs_to :current_question, class_name: 'Question', optional: true
 
   before_validation :set_current_question
+  before_create :set_start_time
 
   def completed?
     current_question.nil?
@@ -50,10 +51,20 @@ class TestPassage < ApplicationRecord
   end
 
   def remaining_time
-    (self.test.time_limit * 60 - (Time.current - created_at).seconds).to_i
+    unless self.test.time_limit.nil?
+      (self.test.time_limit * 60 - (Time.current - created_at).seconds).to_i
+    end
+  end
+
+  def set_end_time
+    self.update_attribute(:end_time, Time.current)
   end
 
   private
+
+  def set_start_time
+    self.start_time = Time.current
+  end
   
   def set_current_question
     self.current_question = next_question
