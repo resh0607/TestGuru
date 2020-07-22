@@ -3,5 +3,6 @@
   <td><%= test.level %></td>
   <td><%= test.questions.count %></td>
   <td><%= test.time_limit %></td>
-  <td><%= button_to t('.start'), start_test_path(test), class: 'btn btn-outline-success' %></td>
+  <td><%= sanitize active(test) %></td>
+  <td><%= button_to start_button(test), start_test_path(test), class: 'btn btn-outline-success' %></td>
 </tr>
