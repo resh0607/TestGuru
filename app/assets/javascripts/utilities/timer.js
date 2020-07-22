@@ -16,7 +16,6 @@ function startTimer(control, remainingTime) {
     remainingTime--;
     setTimeout(startTimer, 1000, control, remainingTime);
   } else {
-    var resultPage = window.location.href + '/result';
-    window.location.replace(resultPage);
+    document.querySelector('.timer_label').textContent = 'Время вышло, нажмите ВПЕРЕД, чтобы просмотреть результат'
   }
 }
