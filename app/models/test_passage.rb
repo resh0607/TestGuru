@@ -7,10 +7,10 @@ class TestPassage < ApplicationRecord
   belongs_to :current_question, class_name: 'Question', optional: true
 
   before_validation :set_current_question
-  before_create :set_start_time
+  before_create :set_start_time, :set_end_time
 
   def completed?
-    current_question.nil?
+    current_question.nil? || time_is_up?
   end
 
   def result_percent
@@ -18,7 +18,16 @@ class TestPassage < ApplicationRecord
   end
 
   def passed?
+    return false if time_is_up?
     result_percent >= SUCCESS_PERCENT
+  end
+
+  def time_is_up?
+    if test.time_limit && self.end_time < Time.current
+      true
+    else
+      false
+    end
   end
 
   def question_number
@@ -47,17 +56,19 @@ class TestPassage < ApplicationRecord
   end
 
   def set_success
-    self.success = passed?
+    success = passed?
   end
 
   def remaining_time
-    unless self.test.time_limit.nil?
-      (self.test.time_limit * 60 - (Time.current - created_at).seconds).to_i
+    unless test.time_limit.nil?
+      (test.time_limit * 60 - (Time.current - created_at).seconds).to_i
     end
   end
 
   def set_end_time
-    self.update_attribute(:end_time, Time.current)
+    if test.time_limit
+      self.end_time = self.start_time + test.time_limit * 60
+    end
   end
 
   private
@@ -85,7 +96,7 @@ class TestPassage < ApplicationRecord
     if self.new_record?
       test.questions.first
     else
-      test.questions.order(:id).where('id > ?', self.current_question.id).first
+      test.questions.order(:id).where('id > ?', current_question.id).first
     end
   end
 end
