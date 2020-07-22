@@ -1,5 +1,6 @@
 document.addEventListener('turbolinks:load', function(){
   var timerElement = document.querySelector('.timer')
+  var form = document.querySelector('#form');
   if (timerElement) {
     var remainingTime = timerElement.dataset.remainingTime;
     if (remainingTime != null) {
@@ -16,6 +17,6 @@ function startTimer(control, remainingTime) {
     remainingTime--;
     setTimeout(startTimer, 1000, control, remainingTime);
   } else {
-    document.querySelector('.timer_label').textContent = 'Время вышло, нажмите ВПЕРЕД, чтобы просмотреть результат'
+    form.submit();
   }
 }
