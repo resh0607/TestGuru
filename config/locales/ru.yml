@@ -47,9 +47,11 @@ ru:
       level: "Уровень"
       count_of_questions: "Количество вопросов"
       time_limit: "Время прохождения (мин.)"
+      active_tests: "Активные"
       
     test:
       start: "Начать тест"
+      continue: "Продолжить"
 
   feedbacks:
     create:

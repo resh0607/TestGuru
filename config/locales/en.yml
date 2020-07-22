@@ -76,8 +76,10 @@ en:
       level: "Level"
       count_of_questions: "Count of questions"
       time_limit: "Time limit (min.)"
+      active_tests: "Active tests"
     test:
       start: "Start test"
+      continue: "Сontinue"
 
   feedbacks:
     create:
